@@ -25,8 +25,7 @@ git clone https://github.com/wyt-gh/createdream.git /www/createdream
 
 
 ### 设置runtime目录权限，该目录已从svn中去除，需要先创建
-mkdir /www/createdream/runtime
-chmod -R 777 /www/createdream/runtime
+mkdir -m 777 /www/createdream/runtime
 
 ### 重启服务器
 reboot
