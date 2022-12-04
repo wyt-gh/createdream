@@ -2,6 +2,10 @@
   Options +FollowSymlinks -Multiviews
   RewriteEngine On
 
+  RewriteCond %{HTTP_HOST} ^www.wangyitao.cn$
+  RewriteCond %{SERVER_PORT} ^80$
+  RewriteRule ^.* https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
