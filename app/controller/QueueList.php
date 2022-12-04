@@ -36,7 +36,7 @@ class QueueList extends BaseController
     }
 
     //发送邮件
-    public function hello()
+    public function email()
     {
         //调用类
         $jobHandlerClassName = 'app\controller\Jobs@sendEmail';

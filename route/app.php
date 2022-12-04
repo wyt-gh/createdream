@@ -15,7 +15,9 @@ Route::get('think', function () {
 });
 
 Route::get('hello$', 'index/hello');
+Route::get('main$', 'index/main');
+
 Route::get('table$', 'Jobs/createTable');
 Route::get('queue$', 'queue_list/index');
 Route::get('push$', 'queue_list/queuePush');
-Route::get('queue_hello$', 'queue_list/hello');
+
