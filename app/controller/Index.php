@@ -21,9 +21,10 @@ class Index extends BaseController
 
     public function hello()
     {
-        halt(phpinfo());
+//        halt(env('cache.host', '127.0.0.1'));
+//        halt(phpinfo());
         Cache::delete('name');
-//        Cache::set('name', 'zhangsan111');
+        Cache::set('name', 'zhangsan111');
         $name = Cache::get('name');
         halt($name);
     }

@@ -53,7 +53,7 @@ class QueueList extends BaseController
 
         //当前任务归属的队列名称，如果为新队列，会自动创建
         //php think queue:work --queue helloQueue
-        //php think queue:work --queue helloQueue --daemon
+        //php think queue:work --queue orderJobQueue --daemon
 //        $jobQueueName = "helloQueue";
         $jobQueueName = "orderJobQueue";
 

@@ -4,7 +4,7 @@ namespace app\controller;
 
 use app\BaseController;
 
-use app\tool\Email;
+use common\service\Email;
 use think\Exception;
 use think\facade\Cache;
 use think\facade\Db;
@@ -12,20 +12,6 @@ use think\Queue\Job;
 
 class Jobs extends BaseController
 {
-    public function createTable()
-    {
-        $sql = "CREATE TABLE IF NOT EXISTS `user` (
-            `id` int(11) NOT NULL AUTO_INCREMENT,
-            `name` varchar(255) NOT NULL,
-            `age` int(10) NOT NULL,
-            `create_time` int(10) unsigned NOT NULL,
-            `update_time` int(10) unsigned NOT NULL,
-            `delete_time` int(10) unsigned DEFAULT NULL,
-            PRIMARY KEY (`id`)
-        )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
-        $res = Db::execute($sql);
-    }
-
     public function fire(Job $job, $data)
     {
         //删除

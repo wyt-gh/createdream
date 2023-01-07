@@ -9,7 +9,7 @@
 // | Author: yunwuxin <448901948@qq.com>
 // +----------------------------------------------------------------------
 
-return [
+$config =  [
     'default'     => 'redis',
     'connections' => [
         'sync'     => [
@@ -24,7 +24,7 @@ return [
         'redis'    => [
             'type'       => 'redis',
             'queue'      => 'default',
-            'host'       => '127.0.0.1',
+            'host'       => env('cache.host', '127.0.0.1'),
             'port'       => 6379,
             'password'   => '',
             'select'     => 0,
@@ -37,3 +37,5 @@ return [
         'table' => 'failed_jobs',
     ],
 ];
+
+return $config;

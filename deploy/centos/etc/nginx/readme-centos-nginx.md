@@ -26,6 +26,7 @@ systemctl start mysqld.service
 ### 查看默认密码
 grep 'temporary password' /var/log/mysqld.log
 ### 登录
+docker exec -it mysql /bin/bash
 mysql -uroot -p
 ### 设置密码及加密格式(密码不能过于简单,包含大小写字母数字下划线)
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Wyt_199999';
